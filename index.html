@@ -1,41 +1,36 @@
 <!DOCTYPE html>
-<html lang="en-US"></html>
-<html>
+<html lang="en-US">
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Magic Deck</title>
         <meta charset="utf-8">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="icon" type="image/x-icon" href="/images/favicon.png">
     </head>
     <body>
+        <h1>Magic Card Trick</h1>
+        <p id="instructions">Select the line containing your card:</p>
+        <div id="cards-container" class="cards-container"></div>
+        <div class="line-selection">
+            <button onclick="selectLine(1)">Line 1</button>
+            <button onclick="selectLine(2)">Line 2</button>
+            <button onclick="selectLine(3)">Line 3</button>
+        </div>
+  <script src="script.js"></script>    </body>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const sparkleCount = 20; // Number of sparkles
+        const body = document.body;
 
-        <h1>Choose a card and select the line it is in</h1>
-
-        <img src="deck-images/card1.png"  width="110" height="160">
-        <img src="deck-images/card2.png"  width="110" height="160">
-        <img src="deck-images/card3.png"  width="110" height="160">
-        <img src="deck-images/card4.png"  width="110" height="160">
-        <img src="deck-images/card5.png"  width="110" height="160">
-        <img src="deck-images/card6.png"  width="110" height="160">
-        <img src="deck-images/card7.png"  width="110" height="160">
-        </br> 
-        </br> 
-        </br>
-        <img src="deck-images/card8.png"  width="110" height="160">
-        <img src="deck-images/card9.png"  width="110" height="160">
-        <img src="deck-images/card10.png"  width="110" height="160">
-        <img src="deck-images/card11.png"  width="110" height="160">
-        <img src="deck-images/card12.png"  width="110" height="160">
-        <img src="deck-images/card13.png"  width="110" height="160">
-        <img src="deck-images/card14.png"  width="110" height="160">
-        </br> 
-        </br> 
-        </br> 
-        <img src="deck-images/card15.png"  width="110" height="160">
-        <img src="deck-images/card16.png"  width="110" height="160">
-        <img src="deck-images/card17.png"  width="110" height="160">
-        <img src="deck-images/card18.png"  width="110" height="160">
-        <img src="deck-images/card19.png"  width="110" height="160">
-        <img src="deck-images/card20.png"  width="110" height="160">
-        <img src="deck-images/card21.png"  width="110" height="160">
-
-    </body>
+        for (let i = 0; i < sparkleCount; i++) {
+            const sparkle = document.createElement('div');
+            sparkle.classList.add('sparkle');
+            sparkle.style.top = Math.random() * 100 + 'vh';
+            sparkle.style.left = Math.random() * 100 + 'vw';
+            sparkle.style.animationDuration = Math.random() * 3 + 2 + 's';
+            body.appendChild(sparkle);
+        }
+    });
+</script>
 </html>
